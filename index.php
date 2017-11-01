@@ -29,6 +29,7 @@ include_once( 'includes/hostapd.php' );
 include_once( 'includes/system.php' );
 include_once( 'includes/configure_client.php' );
 include_once( 'includes/networking.php' );
+include_once( 'includes/advnetworking.php' );
 include_once( 'includes/themes.php' );
 
 $output = $return = 0;
@@ -127,6 +128,9 @@ $theme_url = 'dist/css/' . $theme;
                         <li>
                             <a href="index.php?page=network_conf"><i class="fa fa-sitemap fa-fw"></i> Basic Networking</a>
                         </li>
+                        <li>
+                            <a href="index.php?page=advnetwork_conf"><i class="fa fa-sitemap fa-fw"></i> Basic Networking</a>
+                        </li>
                     </ul>
               </li>
               <li>
@@ -181,6 +185,9 @@ $theme_url = 'dist/css/' . $theme;
             break;
           case "network_conf":
             DisplayNetworkingConfig();
+            break;
+          case "advnetwork_conf":
+            DisplayAdvNetworkConfig();
             break;
           case "hostapd_conf":
             DisplayHostAPDConfig();
